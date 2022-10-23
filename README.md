@@ -1,3 +1,15 @@
+Setup react-router, implement Nested routes, 404 page, and Error boundary. Set up client-side pagination using randomuser.me API in one of your routes called Users - you should show the prev, next, and navigation to individual pages 1, 2, 3, 4, 5 etc. Implement accessibility and disabled state and API loading states.
+
+- i have done the pagination for the pages and also the accessibility and disabled and loading state 
+- i havent implemented the nested routes
+- i havent done the 404 page
+- not done the error boundary
+- there is no route for user but the page for pagination is currently the main page now 
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
