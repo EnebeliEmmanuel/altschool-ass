@@ -1,7 +1,9 @@
 import { lazy, useContext } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { PostContext } from "../utils/contexts/PostContext";
 import { ThemeContext } from "../utils/contexts/ThemeContext";
+import Spinner from "./Spinner";
 
 const Navbar = lazy(() => import("./Navbar"));
 const Header = lazy(() => import("./Header"));
@@ -10,6 +12,7 @@ const User = lazy(() => import("./Users"));
 
 const Layout = () => {
   const { theme } = useContext(ThemeContext);
+  const { loading } = useContext(PostContext);
   return (
     <main className={`app ${theme}`}>
       <Navbar />
@@ -17,7 +20,7 @@ const Layout = () => {
         <ToastContainer className={`toast-container ${theme}`} />
         <Header />
         {/* <Main /> */}
-        <User />
+        {loading ? <Spinner /> : <User />}
       </section>
     </main>
   );
