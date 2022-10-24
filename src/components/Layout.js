@@ -11,17 +11,20 @@ const Main = lazy(() => import("./Main"));
 const User = lazy(() => import("./Users"));
 
 const Layout = () => {
+  
   const { theme } = useContext(ThemeContext);
   const { loading } = useContext(PostContext);
   return (
-    <main className={`app ${theme}`}>
+    <main className={`app ${theme}`}>     
+    
       <Navbar />
       <section className="header-main">
         <ToastContainer className={`toast-container ${theme}`} />
-        <Header />
+        {/* <Header /> */}
         {/* <Main /> */}
         {loading ? <Spinner /> : <User />}
       </section>
+      
     </main>
   );
 };
