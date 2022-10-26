@@ -9,6 +9,7 @@ const Navbar = lazy(() => import("./Navbar"));
 const Header = lazy(() => import("./Header"));
 const Main = lazy(() => import("./Main"));
 const User = lazy(() => import("./Users"));
+// const AppRoutes = lazy(() => import("./AppRoutes"));
 
 const Layout = () => {
   
@@ -17,11 +18,12 @@ const Layout = () => {
   return (
     <main className={`app ${theme}`}>     
     
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="header-main">
         <ToastContainer className={`toast-container ${theme}`} />
         {/* <Header /> */}
         {/* <Main /> */}
+        {/* {loading ? <Spinner /> : <AppRoutes />} */}
         {loading ? <Spinner /> : <User />}
       </section>
       
